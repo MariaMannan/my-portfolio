@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import resumePDF from '../assets/Maria_Mannan_Resume.pdf'
 import './Navbar.css'
 
 const navItems = [
@@ -58,7 +59,7 @@ const Navbar = () => {
         </ul>
 
         <motion.a 
-          href="/resume.pdf" 
+          href={resumePDF} 
           className="navbar-resume"
           target="_blank"
           rel="noopener noreferrer"
@@ -108,7 +109,7 @@ const Navbar = () => {
                 transition={{ delay: 0.5 }}
               >
                 <a 
-                  href="/resume.pdf" 
+                  href={resumePDF} 
                   className="mobile-resume"
                   target="_blank"
                   rel="noopener noreferrer"
