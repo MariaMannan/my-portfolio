@@ -1,10 +1,23 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { ExternalLink, Github, Folder } from 'lucide-react'
+import ProjectDetails from './ProjectDetails'
 import './Projects.css'
 
 const featuredProjects = [
+  {
+    id: 'support-ai',
+    title: 'SupportAI — Smart Email Replies',
+    subtitle: 'A premium, production-ready AI email response generator designed for modern customer support teams.',
+    description: 'Powered by Google Gemini, this application transforms raw customer inquiries into polished, professional replies in seconds.',
+    image: null,
+    technologies: ['Python', 'Streamlit', 'Google Gemini', 'Glassmorphism UI'],
+    github: 'https://github.com/MariaMannan/ai_email_assistant',
+    live: 'https://aiemailautomation-app.streamlit.app/',
+    featured: true,
+    hasDetails: true
+  },
   {
     id: 1,
     title: 'AI-Powered Web Applications',
@@ -64,6 +77,7 @@ const otherProjects = [
 const Projects = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const [selectedProject, setSelectedProject] = useState(null)
 
   return (
     <section id="projects" className="projects" ref={ref}>
@@ -130,6 +144,15 @@ const Projects = () => {
                       <ExternalLink size={20} />
                     </motion.a>
                   )}
+                  {project.hasDetails && (
+                    <motion.button 
+                      className="view-details-btn"
+                      onClick={() => setSelectedProject(project)}
+                      whileHover={{ y: -3 }}
+                    >
+                      View Details
+                    </motion.button>
+                  )}
                 </div>
               </div>
             </motion.article>
@@ -193,6 +216,11 @@ const Projects = () => {
           </a>
         </motion.div>
       </div>
+
+      <ProjectDetails 
+        project={selectedProject} 
+        onClose={() => setSelectedProject(null)} 
+      />
     </section>
   )
 }

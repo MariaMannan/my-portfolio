@@ -7,10 +7,24 @@ import './Achievements.css'
 const achievements = [
   {
     icon: <BookOpen size={28} />,
-    title: 'Agentic & Robotics AI Course',
+    title: 'Agentic & Robotics AI',
     organization: 'PIAIC',
     description: 'Currently enrolled in cutting-edge AI course focusing on autonomous agents and robotics integration.',
-    type: 'ongoing',
+    type: 'certification',
+  },
+  {
+    icon: <Award size={28} />,
+    title: 'OpenAI Agents SDK (Lvl 1 & 2)',
+    organization: 'PIAIC',
+    description: 'Certified in building autonomous agents and advanced workflows using OpenAI SDK.',
+    type: 'certification',
+  },
+  {
+    icon: <Award size={28} />,
+    title: 'Prompt Engineering & MCP',
+    organization: 'PIAIC',
+    description: 'Certified in advanced Prompt Engineering (78%) and Model Context Protocol (MCP) Servers.',
+    type: 'certification',
   },
   {
     icon: <Award size={28} />,
@@ -87,7 +101,7 @@ const Achievements = () => {
                 <p className="achievement-desc">{achievement.description}</p>
               </div>
               <div className={`achievement-badge ${achievement.type}`}>
-                {achievement.type === 'ongoing' ? 'Currently Enrolled' : 'Leadership'}
+                {achievement.type === 'certification' ? 'Certification' : 'Leadership'}
               </div>
             </motion.div>
           ))}

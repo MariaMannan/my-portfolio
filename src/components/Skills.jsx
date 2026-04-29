@@ -8,10 +8,10 @@ const skillCategories = [
     title: 'Languages & Frameworks',
     skills: [
       { name: 'Python', level: 90 },
-      { name: 'JavaScript', level: 85 },
       { name: 'FastAPI', level: 88 },
+      { name: 'JavaScript / Vue.js', level: 85 },
       { name: 'React', level: 80 },
-      { name: 'PHP', level: 70 },
+      { name: 'PHP / Laravel', level: 70 },
     ],
   },
   {
@@ -26,9 +26,9 @@ const skillCategories = [
     title: 'AI & ML',
     skills: [
       { name: 'OpenAI SDK', level: 85 },
-      { name: 'Chainlit', level: 80 },
-      { name: 'Streamlit', level: 82 },
-      { name: 'Machine Learning', level: 70 },
+      { name: 'MCP Servers', level: 85 },
+      { name: 'Chainlit / Streamlit', level: 82 },
+      { name: 'Web Scraping', level: 80 },
     ],
   },
   {
@@ -51,9 +51,9 @@ const skillCategories = [
 ]
 
 const allTags = [
-  'Python', 'JavaScript', 'Responsive Web Design', 'FastAPI', 'MySQL', 
-  'MongoDB', 'PostgreSQL', 'Team Lead', 'Version Control (Git)', 'Streamlit',
-  'Artificial Intelligence', 'Machine Learning', 'AI & Robotics Concepts',
+  'Python', 'JavaScript', 'Vue.js', 'React', 'FastAPI', 'MySQL', 
+  'MongoDB', 'PostgreSQL', 'Laravel', 'Version Control (Git)', 'Streamlit',
+  'Prompt Engineering', 'MCP Servers', 'Web Scraping', 'Selenium / BS4',
   'Debugging & Problem-Solving', 'Postman', 'CI/CD', 'Chainlit', 'Jest',
   'Vitest', 'Pytest', 'Docker', 'OpenAI SDK'
 ]

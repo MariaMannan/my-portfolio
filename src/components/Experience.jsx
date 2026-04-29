@@ -24,11 +24,11 @@ const experiences = [
   },
   {
     id: 2,
-    title: 'AI & Robotics Learning Projects',
+    title: 'AI Project Developer',
     company: 'PIAIC',
-    location: 'Pakistan',
-    period: 'Ongoing',
-    type: 'Learning Program',
+    location: 'Lahore',
+    period: '2023 - Apr 2025',
+    type: 'Professional Experience',
     achievements: [
       'Developing AI-based projects using Python & Streamlit for interactive web applications',
       'Working with Chainlit for conversational AI interfaces',

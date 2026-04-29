@@ -59,7 +59,7 @@
   transition: all var(--transition-base);
 }
 
-.achievement-icon.ongoing {
+.achievement-icon.certification {
   background: linear-gradient(135deg, rgba(20, 184, 166, 0.15), rgba(45, 212, 191, 0.1));
 }
 
@@ -111,7 +111,7 @@
   letter-spacing: 0.05em;
 }
 
-.achievement-badge.ongoing {
+.achievement-badge.certification {
   background: var(--color-accent-glow);
   color: var(--color-accent-primary);
 }
