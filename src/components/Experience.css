@@ -104,8 +104,30 @@
   font-weight: 400;
 }
 
-.exp-company {
+.exp-company-link {
   color: var(--color-accent-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.exp-company-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background: var(--color-accent-primary);
+  transition: width var(--transition-base);
+}
+
+.exp-company-link:hover {
+  color: var(--color-accent-secondary);
+}
+
+.exp-company-link:hover::after {
+  width: 100%;
 }
 
 .exp-meta {

@@ -9,6 +9,7 @@ const experiences = [
     id: 1,
     title: 'Software Engineer',
     company: 'AML Watcher',
+    url: 'https://amlwatcher.com/',
     location: 'Lahore',
     period: 'Apr 2025 - Present',
     type: 'Full-time',
@@ -24,6 +25,7 @@ const experiences = [
     id: 2,
     title: 'Automation & Integration Engineer',
     company: 'The KYB',
+    url: 'https://thekyb.com/',
     location: 'Lahore',
     period: 'Dec 2025 - Mar 2026',
     type: 'Full-time',
@@ -39,6 +41,7 @@ const experiences = [
     id: 3,
     title: 'AI Software Engineer',
     company: 'Shufti Pro',
+    url: 'https://shuftipro.com/',
     location: 'Lahore',
     period: 'Apr 2025 - Nov 2025',
     type: 'Full-time',
@@ -111,7 +114,9 @@ const Experience = () => {
                   <h3 className="exp-title">
                     {exp.title}
                     <span className="exp-at">@</span>
-                    <span className="exp-company">{exp.company}</span>
+                    <a href={exp.url} target="_blank" rel="noopener noreferrer" className="exp-company-link">
+                      {exp.company}
+                    </a>
                   </h3>
                   <div className="exp-meta">
                     <span className="exp-meta-item">

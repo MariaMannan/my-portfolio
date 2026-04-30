@@ -55,7 +55,7 @@ const About = () => {
           >
             <p>
               Hello! I'm Maria, a motivated and detail-oriented Computer Science graduate
-              with a solid foundation in <span className="highlight">full-stack software development</span>.
+              with a solid foundation in <span className="highlight">AI software development</span>.
               I'm passionate about building efficient, scalable applications and exploring the
               intersection of <span className="highlight">AI</span> and modern web technologies.
             </p>
