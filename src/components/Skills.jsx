@@ -10,7 +10,6 @@ const skillCategories = [
       { name: 'Python', level: 90 },
       { name: 'FastAPI', level: 88 },
       { name: 'JavaScript / Vue.js', level: 85 },
-      { name: 'React', level: 80 },
       { name: 'PHP / Laravel', level: 70 },
     ],
   },
@@ -51,7 +50,7 @@ const skillCategories = [
 ]
 
 const allTags = [
-  'Python', 'JavaScript', 'Vue.js', 'React', 'FastAPI', 'MySQL', 
+  'Python', 'JavaScript', 'Vue.js', 'FastAPI', 'MySQL',
   'MongoDB', 'PostgreSQL', 'Laravel', 'Version Control (Git)', 'Streamlit',
   'Prompt Engineering', 'MCP Servers', 'Web Scraping', 'Selenium / BS4',
   'Debugging & Problem-Solving', 'Postman', 'CI/CD', 'Chainlit', 'Jest',
@@ -78,7 +77,7 @@ const Skills = () => {
         </motion.div>
 
         <div className="skills-content">
-          <motion.div 
+          <motion.div
             className="skills-bars"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
@@ -86,7 +85,7 @@ const Skills = () => {
           >
             {skillCategories.map((category, catIndex) => (
               <div key={category.title} className="skill-category">
-                <motion.h3 
+                <motion.h3
                   className="category-title"
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -96,7 +95,7 @@ const Skills = () => {
                 </motion.h3>
                 <div className="category-skills">
                   {category.skills.map((skill, skillIndex) => (
-                    <motion.div 
+                    <motion.div
                       key={skill.name}
                       className="skill-bar"
                       initial={{ opacity: 0 }}
@@ -108,12 +107,12 @@ const Skills = () => {
                         <span className="skill-percent">{skill.level}%</span>
                       </div>
                       <div className="skill-track">
-                        <motion.div 
+                        <motion.div
                           className="skill-fill"
                           initial={{ scaleX: 0 }}
                           animate={isInView ? { scaleX: skill.level / 100 } : {}}
-                          transition={{ 
-                            duration: 0.8, 
+                          transition={{
+                            duration: 0.8,
                             delay: 0.5 + catIndex * 0.1 + skillIndex * 0.05,
                             ease: 'easeOut'
                           }}
@@ -126,7 +125,7 @@ const Skills = () => {
             ))}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="skills-cloud"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -135,7 +134,7 @@ const Skills = () => {
             <h3 className="cloud-title">All Technologies</h3>
             <div className="tags-container">
               {allTags.map((tag, index) => (
-                <motion.span 
+                <motion.span
                   key={tag}
                   className="skill-tag"
                   initial={{ opacity: 0, scale: 0.8 }}

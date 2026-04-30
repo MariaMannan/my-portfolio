@@ -7,51 +7,50 @@ import './Experience.css'
 const experiences = [
   {
     id: 1,
-    title: 'Associate Software Engineer',
-    company: 'Programmers Force',
+    title: 'Software Engineer',
+    company: 'AML Watcher',
     location: 'Lahore',
     period: 'Apr 2025 - Present',
     type: 'Full-time',
     achievements: [
-      'Working as Full Stack Software Engineer in both frontend and backend development',
-      'Developing useful AI features for projects using OpenAI agent SDK and different models',
-      'Creating robust APIs using FastAPI framework',
-      'Containerizing projects using Docker for consistent deployment',
-      'Running postman collection test cases for API validation',
-      'Implementing and maintaining CI/CD pipelines for automated deployments',
+      'Crawled and scraped data by integrating watchlist resources through Selenium, BeautifulSoup, and Requests.',
+      'Processed and integrated both structured and raw data across different modules.',
+      'Automated data extraction and ensured seamless integration with the core system.',
+      'Contributed directly to the core product: amlwatcher.com',
     ],
-    technologies: ['Python', 'FastAPI', 'React', 'OpenAI SDK', 'Docker', 'CI/CD'],
+    technologies: ['Python', 'Selenium', 'BeautifulSoup', 'Requests', 'Web Scraping', 'Automation'],
   },
   {
     id: 2,
-    title: 'AI Project Developer',
-    company: 'PIAIC',
+    title: 'Automation & Integration Engineer',
+    company: 'The KYB',
     location: 'Lahore',
-    period: '2023 - Apr 2025',
-    type: 'Professional Experience',
+    period: 'Dec 2025 - Mar 2026',
+    type: 'Full-time',
     achievements: [
-      'Developing AI-based projects using Python & Streamlit for interactive web applications',
-      'Working with Chainlit for conversational AI interfaces',
-      'Building applications using OpenAI Agent SDK for intelligent automation',
-      'Creating real-time data processing and visualization tools',
+      'Performed complex web scraping using Selenium across multiple modules.',
+      'Successfully integrated scraped data and modules directly into the system.',
+      'Developed automated workflows to streamline processes and optimize performance.',
+      'Contributed directly to the core product: thekyb.com',
     ],
-    technologies: ['Python', 'Streamlit', 'Chainlit', 'OpenAI Agent SDK'],
+    technologies: ['Python', 'Selenium', 'Automation', 'System Integration', 'Web Scraping'],
   },
   {
     id: 3,
-    title: 'Medicine Price Analyzer',
-    company: 'Final Year Project',
-    location: 'GCUL',
-    period: '2018 - 2019',
-    type: 'Academic Project',
+    title: 'AI Software Engineer',
+    company: 'Shufti Pro',
+    location: 'Lahore',
+    period: 'Apr 2025 - Nov 2025',
+    type: 'Full-time',
     achievements: [
-      'Implemented dynamic data management backend using PHP and MySQL',
-      'Built real-time analysis and price comparison across multiple suppliers',
-      'Designed responsive user interface with HTML, CSS, and JavaScript',
-      'Developed robust search and filter capabilities for medicine discovery',
-      'Optimized website for seamless interaction across devices',
+      'Developed AI features including OCR and risk analysis detection systems.',
+      'Connected Large Language Models (LLMs) to applications for enhanced AI capabilities.',
+      'Built features utilizing OpenAI agents and Twilio agents.',
+      'Contributed to the development of the AI Journey Builder.',
+      'Created robust backend API services using FastAPI.',
+      'Contributed directly to the core product: shuftipro.com',
     ],
-    technologies: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+    technologies: ['Python', 'FastAPI', 'OpenAI Agents', 'LLMs', 'OCR', 'Twilio'],
   },
 ]
 
@@ -76,7 +75,7 @@ const Experience = () => {
         </motion.div>
 
         <div className="experience-content">
-          <motion.div 
+          <motion.div
             className="experience-tabs"
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -94,7 +93,7 @@ const Experience = () => {
             ))}
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="experience-details"
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -110,7 +109,7 @@ const Experience = () => {
               >
                 <div className="exp-header">
                   <h3 className="exp-title">
-                    {exp.title} 
+                    {exp.title}
                     <span className="exp-at">@</span>
                     <span className="exp-company">{exp.company}</span>
                   </h3>
@@ -129,7 +128,7 @@ const Experience = () => {
 
                 <ul className="exp-achievements">
                   {exp.achievements.map((achievement, i) => (
-                    <motion.li 
+                    <motion.li
                       key={i}
                       initial={{ opacity: 0, x: -10 }}
                       animate={{ opacity: activeExp === index ? 1 : 0, x: 0 }}

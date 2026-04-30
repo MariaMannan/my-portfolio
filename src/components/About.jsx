@@ -31,54 +31,54 @@ const About = () => {
         </motion.div>
 
         <div className="about-content">
-          <motion.div 
+          <motion.div
             className="about-image-section"
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="about-image-wrapper">
-              <img 
-                src="/images/profile.png" 
-                alt="Maria Mannan" 
+              <img
+                src="/images/profile.png"
+                alt="Maria Mannan"
                 className="about-image"
               />
               <div className="about-image-border"></div>
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="about-text"
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <p>
-              Hello! I'm Maria, a motivated and detail-oriented Computer Science graduate 
-              with a solid foundation in <span className="highlight">full-stack software development</span>. 
-              I'm passionate about building efficient, scalable applications and exploring the 
+              Hello! I'm Maria, a motivated and detail-oriented Computer Science graduate
+              with a solid foundation in <span className="highlight">full-stack software development</span>.
+              I'm passionate about building efficient, scalable applications and exploring the
               intersection of <span className="highlight">AI</span> and modern web technologies.
             </p>
             <p>
-              My journey in tech began during my bachelor's at Government College University, 
-              where I developed a strong foundation in programming principles and software 
-              engineering. Since then, I've been committed to continuous learning and have 
+              My journey in tech began during my bachelor's at Government College University,
+              where I developed a strong foundation in programming principles and software
+              engineering. Since then, I've been committed to continuous learning and have
               expanded my expertise to include modern frameworks and AI technologies.
             </p>
             <p>
-              Currently, I'm working as an <span className="highlight">Associate Software Engineer</span> at 
-              Programmers Force, where I develop full-stack applications and integrate AI features 
-              using OpenAI's agent SDK. I'm also enrolled in an Agentic & Robotics AI course at PIAIC 
+              Currently, I'm working as an <span className="highlight"> Software Engineer</span> at
+              Programmers Force, where I develop full-stack applications and integrate AI features
+              using OpenAI's agent SDK. I'm also enrolled in an Agentic & Robotics AI course at PIAIC
               to further deepen my knowledge in artificial intelligence.
             </p>
             <p>
-              When I'm not coding, you'll find me exploring new technologies, contributing to 
+              When I'm not coding, you'll find me exploring new technologies, contributing to
               tech communities, or working on personal projects that challenge me to grow.
             </p>
 
             <div className="about-highlights-inline">
               {highlights.map((item, index) => (
-                <motion.div 
+                <motion.div
                   key={item.label}
                   className="highlight-item"
                   initial={{ opacity: 0, y: 20 }}
@@ -93,7 +93,7 @@ const About = () => {
           </motion.div>
         </div>
 
-        <motion.div 
+        <motion.div
           className="education-section"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
